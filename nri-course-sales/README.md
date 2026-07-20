@@ -1,42 +1,42 @@
 # Trang bán khóa học – Viện Nghiên cứu Dinh dưỡng TP.HCM (NRI)
 
-Trang tĩnh (HTML/CSS/JS) để giới thiệu khóa học, cho học viên **xem thông tin – đăng ký – thanh toán (QR/chuyển khoản)** và **kết nối Zalo OA** của Viện.
+Trang tĩnh (HTML/CSS/JS) để giới thiệu khóa học, cho học viên **xem thông tin – đăng ký – thanh toán (QR ACB / chuyển khoản)** và **kết nối Zalo OA** của Viện. Màu sắc theo logo Viện (xanh dương `#0E5B9C` + cam `#E8551F`).
 
 ## Cấu trúc
 
 ```
 nri-course-sales/
-├── index.html          # Toàn bộ nội dung trang
+├── index.html          # Toàn bộ nội dung trang (logo NRI dựng bằng SVG)
 └── assets/
     ├── styles.css      # Giao diện
-    └── script.js       # Dữ liệu khóa học + xử lý form/thanh toán
+    └── script.js       # Dữ liệu khóa học + link đăng ký + logic thanh toán/QR
 ```
 
 ## Chạy thử
-
-Mở trực tiếp `index.html` bằng trình duyệt, hoặc chạy server tĩnh:
 
 ```bash
 cd nri-course-sales
 python3 -m http.server 8080   # rồi mở http://localhost:8080
 ```
 
-## Deploy bằng GitHub Pages
+## Nội dung đã cập nhật (từ tài liệu Viện cung cấp)
 
-1. Vào **Settings → Pages** của repository.
-2. Chọn nhánh chứa trang, thư mục `/` (root) hoặc `/docs`.
-3. Truy cập theo đường dẫn `.../nri-course-sales/`.
+- **6 khóa:** Dinh dưỡng Cơ bản (800k), Nâng cao (3,5tr), **Combo ưu đãi 2,5tr**, Nhi khoa (đóng sớm từ 2,1tr), Thực hành Thực đơn (tại Viện), Bệnh mạn tính.
+- **Link đăng ký chính thức** (Google Form) gắn cho từng khóa.
+- **Thanh toán:** ACB · STK `445599888` · VIỆN NGHIÊN CỨU DINH DƯỠNG TP.HCM. Mã QR VietQR tự sinh động theo số tiền + nội dung chuyển khoản.
+- **Zalo OA:** https://zalo.me/4273635035669797437
+- **Liên hệ:** Hotline (028) 39 700 886 · viendinhduong@nrihcm.vn · Số J4, Đường Bửu Long, P. Hòa Hưng, TP.HCM.
 
-## ⚠️ Cần cập nhật trước khi công bố (đang là placeholder)
+## Tùy chọn thay logo ảnh thật
 
-| Vị trí | File | Nội dung cần thay |
-|---|---|---|
-| Nút "Kết nối Zalo OA" | `index.html` (`#zalo-btn`) | Thay `href="#"` bằng link Zalo OA thật, vd `https://zalo.me/<oa_id>` |
-| Thông tin ngân hàng | `index.html` (khối `.bank-info`) | Tên ngân hàng, chủ tài khoản, **số tài khoản** thật |
-| Mã QR thanh toán | `index.html` (`.qr-placeholder`) | Thay bằng `<img>` QR VietQR, vd `https://img.vietqr.io/image/<BANK>-<SOTK>-compact2.png` |
-| Học phí / lịch học | `assets/script.js` (mảng `COURSES`) | Cập nhật `price`, `salePrice`, `meta` theo đợt chiêu sinh mới |
+Logo hiện dựng bằng SVG. Nếu muốn dùng file ảnh gốc: đặt `assets/logo.png` rồi trong `index.html` thay khối `<svg class="steth">…</svg>` bằng:
+
+```html
+<img src="assets/logo.png" alt="Viện NRI" class="steth" style="height:44px;width:auto">
+```
 
 ## Ghi chú
 
-- Thông tin khóa học được tổng hợp từ website Viện (viendinhduongtphcm.org) và có thể thay đổi theo từng đợt — hãy đối chiếu lại trước khi công bố.
-- Form đăng ký hiện xử lý phía client (hiện hướng dẫn thanh toán sau khi gửi). Nếu cần **lưu đơn đăng ký tự động**, có thể nối form với Google Form/Sheet, Formspree hoặc một backend — cho mình biết nếu bạn muốn làm bước này.
+- Mã QR dùng dịch vụ `img.vietqr.io`. Khi mở bằng file local hoặc trong bản xem trước có chặn ảnh ngoài, QR sẽ ẩn và hiện dòng hướng dẫn chuyển khoản thay thế — khi deploy trực tuyến (GitHub Pages…) QR hiển thị bình thường.
+- Học phí Nhi khoa có 4 mốc ưu đãi đóng sớm (hiển thị trong thẻ khóa học). Cập nhật giá/lịch trong mảng `COURSES` ở `assets/script.js` khi có đợt chiêu sinh mới.
+- Form "Đăng ký nhanh" xử lý phía client (hiện hướng dẫn thanh toán + nhắc liên hệ Zalo). Muốn **lưu đơn tự động**, có thể nối với Google Form/Sheet hoặc backend.

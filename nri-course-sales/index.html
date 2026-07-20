@@ -4,18 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Viện NRI – Khóa học Dinh dưỡng | Đăng ký & Thanh toán</title>
-  <meta name="description" content="Viện Nghiên cứu Dinh dưỡng TP.HCM (NRI) – hơn 20 năm đào tạo dinh dưỡng. Xem thông tin, đăng ký, thanh toán khóa học và kết nối Zalo OA." />
+  <meta name="description" content="Viện Nghiên cứu Dinh dưỡng TP.HCM (NRI) – đào tạo dinh dưỡng chuẩn y khoa. Xem thông tin, đăng ký, thanh toán khóa học và kết nối Zalo OA." />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a href="#top" class="brand">
-        <span class="brand-mark">NRI</span>
+      <a href="#top" class="brand" aria-label="Viện Nghiên cứu Dinh dưỡng TP.HCM - NRI">
+        <!-- Logo NRI dựng bằng SVG. Muốn dùng logo ảnh thật: thay khối <svg> này bằng
+             <img src="assets/logo.png" alt="Viện NRI" class="steth" style="height:44px;width:auto"> -->
+        <svg class="steth" viewBox="0 0 64 82" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 7 V13" stroke="#0E5B9C" stroke-width="5"/>
+            <path d="M48 7 V13" stroke="#0E5B9C" stroke-width="5"/>
+            <path d="M16 8 Q32 -1 48 8" stroke="#E8551F" stroke-width="5"/>
+            <path d="M16 13 C 11 40, 22 52, 32 52" stroke="#E8551F" stroke-width="5"/>
+            <path d="M48 13 C 53 40, 42 52, 32 52" stroke="#E8551F" stroke-width="5"/>
+            <path d="M32 55 V63" stroke="#0E5B9C" stroke-width="5"/>
+          </g>
+          <circle cx="32" cy="51" r="5" fill="#E8551F"/>
+          <circle cx="32" cy="70" r="10" fill="#0E5B9C"/>
+          <circle cx="32" cy="70" r="4" fill="#fff"/>
+        </svg>
         <span class="brand-text">
-          <strong>Viện Nghiên cứu Dinh dưỡng</strong>
-          <small>TP. Hồ Chí Minh</small>
+          <span class="brand-nri">NRI</span>
+          <span class="brand-sub">Viện Dinh dưỡng TP.HCM</span>
         </span>
       </a>
       <nav class="nav" aria-label="Điều hướng chính">
@@ -24,7 +38,7 @@
         <a href="#register">Đăng ký</a>
         <a href="#contact">Liên hệ</a>
       </nav>
-      <a href="#register" class="btn btn-primary btn-sm nav-cta">Đăng ký ngay</a>
+      <a href="#courses" class="btn btn-primary btn-sm nav-cta">Đăng ký ngay</a>
     </div>
   </header>
 
@@ -32,32 +46,33 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <span class="eyebrow">Hơn 20 năm nghiên cứu &amp; đào tạo dinh dưỡng</span>
-        <h1>Trở thành chuyên gia dinh dưỡng cùng Viện NRI</h1>
+        <span class="eyebrow">Viện Nghiên cứu Dinh dưỡng TP.HCM</span>
+        <h1>Học dinh dưỡng <span class="accent">chuẩn y khoa</span> cùng chuyên gia đầu ngành</h1>
         <p class="lead">
-          Các khóa học dinh dưỡng chuẩn y khoa, giảng dạy trực tuyến qua Zoom bởi đội ngũ
-          bác sĩ và chuyên gia đầu ngành. Học mọi lúc, cấp chứng nhận hoàn thành.
+          Các khóa đào tạo dinh dưỡng trực tuyến qua Zoom, giảng dạy bởi đội ngũ bác sĩ CK1 và
+          tiến sĩ giàu kinh nghiệm. Thực hành trên phần mềm Nuti Expert, cấp chứng nhận hoàn thành.
         </p>
         <div class="hero-actions">
           <a href="#courses" class="btn btn-primary">Xem khóa học</a>
           <a href="#register" class="btn btn-ghost">Đăng ký &amp; thanh toán</a>
         </div>
         <ul class="hero-stats">
-          <li><strong>20+</strong><span>năm kinh nghiệm</span></li>
-          <li><strong>6+</strong><span>chương trình đào tạo</span></li>
+          <li><strong>6</strong><span>khóa đang tuyển sinh</span></li>
           <li><strong>100%</strong><span>trực tuyến qua Zoom</span></li>
+          <li><strong>CK1&amp;TS</strong><span>bác sĩ giảng dạy</span></li>
         </ul>
       </div>
-      <div class="hero-card" aria-hidden="true">
-        <div class="hero-card-badge">Ưu đãi</div>
-        <h3>Khóa Dinh dưỡng Nhi khoa</h3>
-        <p class="hero-card-price"><s>3.000.000đ</s> <b>2.500.000đ</b></p>
+      <div class="hero-card">
+        <div class="hero-card-badge">Ưu đãi Combo</div>
+        <h3>Combo: Cơ bản + Nâng cao</h3>
+        <p class="hero-card-price"><s>4.300.000đ</s> <b>2.500.000đ</b></p>
+        <p class="save">Tiết kiệm 1.800.000đ &middot; Khai giảng 09/2026</p>
         <ul>
-          <li>✔ 9 buổi tối (T3–T5–T7)</li>
-          <li>✔ Kiến thức chuẩn y khoa</li>
-          <li>✔ Chứng nhận hoàn thành</li>
+          <li>✔ Trọn 2 khóa (10 buổi), online Zoom</li>
+          <li>✔ Ưu đãi thêm khi đăng ký nhóm</li>
+          <li>✔ Thực hành phần mềm Nuti Expert</li>
         </ul>
-        <a href="#register" class="btn btn-primary btn-block">Giữ chỗ ngay</a>
+        <a href="https://forms.gle/3iYRhtkkax3ipqqQ6" target="_blank" rel="noopener" class="btn btn-primary btn-block">Đăng ký Combo</a>
       </div>
     </div>
   </section>
@@ -66,16 +81,13 @@
   <section class="section" id="courses">
     <div class="container">
       <div class="section-head">
-        <h2>Danh mục khóa học</h2>
-        <p>Chọn khóa học phù hợp với mục tiêu của bạn. Nhấn “Đăng ký” để điền thông tin và thanh toán.</p>
+        <h2>Các khóa học đang tuyển sinh</h2>
+        <p>Chọn khóa phù hợp với mục tiêu của bạn. Nhấn “Đăng ký” để mở phiếu đăng ký chính thức của Viện.</p>
       </div>
-
-      <div class="course-grid" id="course-grid">
-        <!-- Courses injected by JS from a single data source -->
-      </div>
+      <div class="course-grid" id="course-grid"><!-- injected by JS --></div>
       <p class="note">
-        * Học phí và lịch khai giảng có thể thay đổi theo từng đợt. Vui lòng liên hệ Viện để nhận
-        lịch mới nhất và các chương trình ưu đãi.
+        * Học phí và lịch khai giảng theo thông báo chiêu sinh mới nhất của Viện. Viện có thể điều chỉnh
+        lịch học phù hợp và chốt lớp khi đủ số lượng học viên.
       </p>
     </div>
   </section>
@@ -83,29 +95,27 @@
   <!-- ============ WHY ============ -->
   <section class="section section-alt" id="why">
     <div class="container">
-      <div class="section-head">
-        <h2>Vì sao chọn Viện NRI?</h2>
-      </div>
+      <div class="section-head"><h2>Vì sao chọn Viện NRI?</h2></div>
       <div class="feature-grid">
         <div class="feature">
           <div class="feature-icon">🎓</div>
           <h3>Chuẩn y khoa</h3>
-          <p>Chương trình biên soạn bởi bác sĩ, chuyên gia dinh dưỡng nhiều năm kinh nghiệm lâm sàng.</p>
+          <p>Giảng dạy bởi bác sĩ CK1, TS.BS giàu kinh nghiệm lâm sàng và dinh dưỡng.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">💻</div>
           <h3>Học trực tuyến</h3>
-          <p>Học qua Zoom vào buổi tối, phù hợp người đi làm. Có bài kiểm tra sau mỗi chuyên đề.</p>
+          <p>Học qua Zoom buổi tối (T3–T5–T7, 19h–21h), phù hợp người đi làm.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🧮</div>
+          <h3>Thực hành Nuti Expert</h3>
+          <p>Thực hành xây dựng thực đơn và đánh giá dinh dưỡng bằng phần mềm chuyên dụng.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">📜</div>
-          <h3>Chứng nhận</h3>
-          <p>Nhận chứng nhận hoàn thành của Viện khi đạt yêu cầu bài kiểm tra cuối khóa.</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🤝</div>
-          <h3>Đồng hành lâu dài</h3>
-          <p>Kết nối cộng đồng học viên và chuyên gia qua Zalo OA để được hỗ trợ sau khóa học.</p>
+          <h3>Cấp chứng nhận</h3>
+          <p>Nhận chứng nhận hoàn thành khi đạt yêu cầu chuyên cần, lý thuyết và thực hành.</p>
         </div>
       </div>
     </div>
@@ -116,8 +126,9 @@
     <div class="container register-grid">
       <div class="register-form-wrap">
         <div class="section-head left">
-          <h2>Đăng ký khóa học</h2>
-          <p>Điền thông tin bên dưới. Sau khi gửi, bạn sẽ nhận hướng dẫn thanh toán và Viện sẽ liên hệ xác nhận.</p>
+          <h2>Đăng ký nhanh</h2>
+          <p>Để lại thông tin, tư vấn viên của Viện sẽ liên hệ hướng dẫn đăng ký và thanh toán.
+             Bạn cũng có thể đăng ký trực tiếp qua phiếu chính thức ở mỗi khóa học phía trên.</p>
         </div>
         <form id="register-form" class="form" novalidate>
           <div class="field">
@@ -144,36 +155,34 @@
             <label for="note">Ghi chú</label>
             <textarea id="note" name="note" rows="3" placeholder="Câu hỏi hoặc yêu cầu thêm (nếu có)"></textarea>
           </div>
-          <div class="form-summary" id="form-summary" hidden></div>
-          <button type="submit" class="btn btn-primary btn-block">Gửi đăng ký &amp; xem thanh toán</button>
+          <button type="submit" class="btn btn-primary btn-block">Gửi thông tin &amp; xem hướng dẫn thanh toán</button>
           <p class="form-hint">Bằng việc gửi, bạn đồng ý để Viện liên hệ tư vấn qua điện thoại/Zalo.</p>
+          <p class="form-alt">Có phiếu đăng ký chính thức? <a href="#courses">Chọn khóa ở mục Khóa học ↑</a></p>
         </form>
       </div>
 
       <!-- PAYMENT -->
       <aside class="payment-card" id="payment">
         <h3>Thanh toán học phí</h3>
-        <p class="payment-sub">Quét mã QR hoặc chuyển khoản theo thông tin dưới đây. Vui lòng ghi đúng nội dung chuyển khoản.</p>
-
+        <p class="payment-sub">Quét mã QR (ACB) hoặc chuyển khoản theo thông tin dưới đây. Ghi đúng nội dung chuyển khoản.</p>
         <div class="qr-box">
-          <!-- TODO: Thay bằng ảnh QR VietQR thật (vd: https://img.vietqr.io/image/<BANK>-<ACCOUNT>-compact2.png) -->
-          <div class="qr-placeholder" id="qr-placeholder">
-            <span>Mã QR VietQR</span>
-            <small>(chèn ảnh QR của Viện tại đây)</small>
+          <img id="qr-img" alt="Mã QR VietQR chuyển khoản ACB - Viện NRI"
+               src="https://img.vietqr.io/image/970416-445599888-compact2.png?accountName=VIEN%20NGHIEN%20CUU%20DINH%20DUONG%20TP.HCM" />
+          <div class="qr-fallback" id="qr-fallback">
+            Mã QR VietQR (ACB · 445599888) sẽ hiển thị khi trang được đăng tải trực tuyến.
+            Trong bản xem trước, vui lòng dùng thông tin chuyển khoản bên dưới.
           </div>
         </div>
-
         <dl class="bank-info">
-          <div><dt>Ngân hàng</dt><dd data-field="bank">Vietcombank — CN TP.HCM</dd></div>
-          <div><dt>Chủ tài khoản</dt><dd data-field="holder">VIEN NGHIEN CUU DINH DUONG TPHCM</dd></div>
-          <div><dt>Số tài khoản</dt><dd data-field="account">0000 0000 0000 <em>(cập nhật)</em></dd></div>
-          <div><dt>Số tiền</dt><dd data-field="amount" id="pay-amount">—</dd></div>
-          <div><dt>Nội dung CK</dt><dd data-field="content" id="pay-content">HOTEN_SODT_TENKHOA</dd></div>
+          <div><dt>Ngân hàng</dt><dd>ACB (Á Châu)</dd></div>
+          <div><dt>Chủ tài khoản</dt><dd>VIỆN NGHIÊN CỨU DINH DƯỠNG TP.HCM</dd></div>
+          <div><dt>Số tài khoản</dt><dd>445599888</dd></div>
+          <div><dt>Số tiền</dt><dd id="pay-amount">—</dd></div>
+          <div><dt>Nội dung CK</dt><dd id="pay-content">Họ tên_Tên khóa</dd></div>
         </dl>
-
         <p class="payment-note">
-          Sau khi chuyển khoản, vui lòng chụp lại biên lai và gửi qua <a href="#contact">Zalo OA của Viện</a>
-          để được xác nhận và xếp lớp.
+          Cách khác: đóng tiền mặt tại Viện — Số J4, Đường Bửu Long, P. Hòa Hưng, TP.HCM.
+          Sau khi chuyển khoản, gửi biên lai qua <a href="#contact">Zalo OA của Viện</a> để được xác nhận.
         </p>
       </aside>
     </div>
@@ -184,19 +193,20 @@
     <div class="container cta-inner">
       <div class="cta-copy">
         <h2>Kết nối với Viện qua Zalo OA</h2>
-        <p>Nhận lịch khai giảng, ưu đãi mới nhất và được chuyên gia tư vấn trực tiếp.</p>
+        <p>Nhận lịch khai giảng, ưu đãi mới nhất và được tư vấn viên hỗ trợ trực tiếp.</p>
         <div class="cta-actions">
-          <!-- TODO: Thay href bằng link Zalo OA thật của Viện (vd: https://zalo.me/<oa_id>) -->
-          <a href="#" class="btn btn-zalo" id="zalo-btn" target="_blank" rel="noopener">
+          <a href="https://zalo.me/4273635035669797437" class="btn btn-zalo" id="zalo-btn" target="_blank" rel="noopener">
             <span class="zalo-logo">Zalo</span> Kết nối Zalo OA
           </a>
-          <a href="tel:02839700886" class="btn btn-ghost-light">📞 028 3970 0886</a>
+          <a href="tel:02839700886" class="btn btn-ghost-light">📞 (028) 39 700 886</a>
         </div>
       </div>
       <ul class="contact-list">
-        <li><strong>Hotline / Zalo:</strong> 028 3970 0886</li>
-        <li><strong>Website:</strong> viendinhduongtphcm.org</li>
-        <li><strong>Facebook:</strong> facebook.com/viendinhduongtphcm</li>
+        <li><strong>Tư vấn viên:</strong> Nguyễn Thị Cẩm Tú</li>
+        <li><strong>Hotline:</strong> (028) 39 700 886</li>
+        <li><strong>Email:</strong> <a href="mailto:viendinhduong@nrihcm.vn">viendinhduong@nrihcm.vn</a></li>
+        <li><strong>Địa chỉ:</strong> Số J4, Đường Bửu Long, P. Hòa Hưng, TP.HCM</li>
+        <li><strong>Fanpage:</strong> Viện Nghiên Cứu Dinh Dưỡng TPHCM – NRI</li>
       </ul>
     </div>
   </section>
@@ -205,8 +215,12 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <strong>Viện Nghiên cứu Dinh dưỡng TP.HCM (NRI)</strong>
-        <p>Nghiên cứu &amp; đào tạo dinh dưỡng chuẩn y khoa hơn 20 năm.</p>
+        <span class="brand-text">
+          <span class="brand-nri">NRI</span>
+          <span class="brand-sub">Viện Dinh dưỡng TP.HCM</span>
+        </span>
+        <p>Viện Nghiên cứu Dinh dưỡng TP.HCM – trực thuộc Sở Khoa học và Công nghệ TP.HCM.
+           Nghiên cứu &amp; đào tạo dinh dưỡng chuẩn y khoa.</p>
       </div>
       <nav class="footer-nav" aria-label="Liên kết chân trang">
         <a href="#courses">Khóa học</a>
@@ -214,7 +228,7 @@
         <a href="#contact">Liên hệ</a>
       </nav>
     </div>
-    <div class="footer-bottom">© <span id="year"></span> Viện Nghiên cứu Dinh dưỡng TP.HCM. Trang đăng ký khóa học.</div>
+    <div class="footer-bottom">© <span id="year"></span> Viện Nghiên cứu Dinh dưỡng TP.HCM (NRI). Trang đăng ký khóa học.</div>
   </footer>
 
   <!-- Success modal -->
@@ -222,11 +236,12 @@
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button class="modal-close" id="modal-close" aria-label="Đóng">×</button>
       <div class="modal-icon">✅</div>
-      <h3 id="modal-title">Đã ghi nhận đăng ký!</h3>
+      <h3 id="modal-title">Đã ghi nhận thông tin!</h3>
       <p id="modal-msg"></p>
-      <p class="modal-next">Bước tiếp theo: thanh toán học phí theo thông tin bên phải, rồi gửi biên lai qua Zalo OA.</p>
+      <p class="modal-next">Bước tiếp theo: thanh toán học phí theo thông tin bên cạnh (QR ACB / chuyển khoản), rồi gửi biên lai qua Zalo OA. Tư vấn viên của Viện cũng sẽ liên hệ với bạn.</p>
       <div class="modal-actions">
-        <a href="#payment" class="btn btn-primary" id="modal-pay">Xem thông tin thanh toán</a>
+        <a href="#payment" class="btn btn-primary" id="modal-pay">Xem thanh toán</a>
+        <a href="https://zalo.me/4273635035669797437" target="_blank" rel="noopener" class="btn btn-ghost">Nhắn Zalo OA</a>
       </div>
     </div>
   </div>
