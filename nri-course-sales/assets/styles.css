@@ -95,21 +95,18 @@ img { max-width: 100%; }
 .hero-stats strong { font-size: 1.7rem; color: var(--blue-700); font-variant-numeric: tabular-nums; }
 .hero-stats span { color: var(--muted); font-size: .9rem; }
 
-.hero-card {
-  position: relative; background: #fff; border-radius: var(--radius); padding: 1.8rem;
-  box-shadow: var(--shadow); border: 1px solid var(--line);
+.hero-photo { margin: 0; text-align: center; }
+.hero-photo img {
+  width: 100%; height: auto; display: block;
+  /* multiply: nền trắng của ảnh JPG hòa vào nền hero, không lộ khung chữ nhật */
+  mix-blend-mode: multiply;
 }
-.hero-card-badge {
-  position: absolute; top: -12px; right: 18px; background: var(--orange); color: #fff;
-  font-weight: 700; font-size: .8rem; padding: .3rem .8rem; border-radius: 999px;
+.hero-photo figcaption {
+  margin-top: .8rem; font-size: .9rem; font-weight: 600; color: var(--blue-800);
+  background: var(--blue-100); display: inline-block; padding: .35rem 1rem; border-radius: 999px;
 }
-.hero-card h3 { margin-top: .3rem; color: var(--blue-900); }
-.hero-card-price { font-size: 1.5rem; margin: .2rem 0 .2rem; }
-.hero-card-price s { color: var(--muted); font-size: 1rem; }
-.hero-card-price b { color: var(--orange); }
-.hero-card .save { color: var(--ok); font-size: .9rem; font-weight: 600; margin: 0 0 1rem; }
-.hero-card ul { list-style: none; padding: 0; margin: 0 0 1.2rem; }
-.hero-card li { padding: .25rem 0; color: var(--ink); }
+/* Ảnh chưa được tải lên repo -> ẩn khung, hero tự giãn 1 cột */
+.hero-photo.missing { display: none; }
 
 /* ===== Sections ===== */
 .section { padding: clamp(3rem, 6vw, 4.5rem) 0; }
