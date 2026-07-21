@@ -113,13 +113,12 @@ function renderCourses() {
     select.appendChild(opt);
   });
 
-  // Cards without an official form scroll to the quick form and preselect
+  // Cards without an official form scroll to the register section and preselect
   grid.querySelectorAll("[data-course]").forEach((btn) => {
     btn.addEventListener("click", () => {
       select.value = btn.dataset.course;
       select.dispatchEvent(new Event("change"));
       document.getElementById("register").scrollIntoView({ behavior: "smooth" });
-      document.getElementById("fullname").focus();
     });
   });
 }
@@ -148,31 +147,11 @@ function updatePayment() {
   }
 }
 
-/* ---- Form validation + submit ---- */
-function setupForm() {
-  const form = document.getElementById("register-form");
-  const select = document.getElementById("course");
+/* ---- Payment picker: keep QR in sync while typing ---- */
+function setupPayPicker() {
   ["change", "input"].forEach((ev) => {
-    select.addEventListener(ev, updatePayment);
+    document.getElementById("course").addEventListener(ev, updatePayment);
     document.getElementById("fullname").addEventListener(ev, updatePayment);
-  });
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let ok = true;
-    ["fullname", "phone", "course"].forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el.value.trim()) { el.classList.add("invalid"); ok = false; }
-      else el.classList.remove("invalid");
-    });
-    if (!ok) return;
-
-    const course = COURSES.find((c) => c.id === select.value);
-    updatePayment();
-    document.getElementById("modal-msg").innerHTML =
-      `Cảm ơn <strong>${document.getElementById("fullname").value.trim()}</strong> đã quan tâm khóa
-       <strong>“${course.name}”</strong>${course.price ? ` (${fmt(course.price)})` : ""}.`;
-    openModal();
   });
 }
 
@@ -184,26 +163,10 @@ function setupQrFallback() {
   img.addEventListener("error", () => { img.style.display = "none"; fb.style.display = "block"; });
 }
 
-/* ---- Modal ---- */
-function openModal() { document.getElementById("modal").hidden = false; }
-function closeModal() { document.getElementById("modal").hidden = true; }
-function setupModal() {
-  document.getElementById("modal-close").addEventListener("click", closeModal);
-  document.getElementById("modal-pay").addEventListener("click", () => {
-    closeModal();
-    document.getElementById("payment").scrollIntoView({ behavior: "smooth" });
-  });
-  document.getElementById("modal").addEventListener("click", (e) => {
-    if (e.target.id === "modal") closeModal();
-  });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
-}
-
 /* ---- Init ---- */
 document.addEventListener("DOMContentLoaded", () => {
   renderCourses();
-  setupForm();
-  setupModal();
+  setupPayPicker();
   setupQrFallback();
   updatePayment();
   document.getElementById("year").textContent = new Date().getFullYear();

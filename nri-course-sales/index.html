@@ -127,44 +127,30 @@
       <div class="register-form-wrap">
         <div class="section-head left">
           <h2>Đăng ký nhanh</h2>
-          <p>Để lại thông tin, tư vấn viên của Viện sẽ liên hệ hướng dẫn đăng ký và thanh toán.
-             Bạn cũng có thể đăng ký trực tiếp qua phiếu chính thức ở mỗi khóa học phía trên.</p>
+          <p>Điền phiếu bên dưới — thông tin gửi thẳng về Viện, tư vấn viên sẽ liên hệ hướng dẫn
+             trong thời gian sớm nhất. Sau khi gửi, thanh toán học phí theo hướng dẫn bên cạnh.</p>
         </div>
-        <form id="register-form" class="form" novalidate>
-          <div class="field">
-            <label for="fullname">Họ và tên <span class="req">*</span></label>
-            <input type="text" id="fullname" name="fullname" required placeholder="Nguyễn Văn A" />
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="phone">Số điện thoại <span class="req">*</span></label>
-              <input type="tel" id="phone" name="phone" required placeholder="09xx xxx xxx" pattern="[0-9\s\+\.]{9,15}" />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="email@example.com" />
-            </div>
-          </div>
-          <div class="field">
-            <label for="course">Khóa học muốn đăng ký <span class="req">*</span></label>
-            <select id="course" name="course" required>
-              <option value="" disabled selected>— Chọn khóa học —</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="note">Ghi chú</label>
-            <textarea id="note" name="note" rows="3" placeholder="Câu hỏi hoặc yêu cầu thêm (nếu có)"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Gửi thông tin &amp; xem hướng dẫn thanh toán</button>
-          <p class="form-hint">Bằng việc gửi, bạn đồng ý để Viện liên hệ tư vấn qua điện thoại/Zalo.</p>
-          <p class="form-alt">Có phiếu đăng ký chính thức? <a href="#courses">Chọn khóa ở mục Khóa học ↑</a></p>
-        </form>
+        <div class="gform-wrap">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSegvW07lv2_AEWdEmb7lw41RTcvsnjUYLhJAE_5wZSp2KwHsw/viewform?embedded=true"
+                  title="Phiếu đăng ký nhanh - Viện NRI" loading="lazy">Đang tải phiếu đăng ký…</iframe>
+        </div>
+        <p class="form-alt">Phiếu không hiển thị?
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSegvW07lv2_AEWdEmb7lw41RTcvsnjUYLhJAE_5wZSp2KwHsw/viewform"
+             target="_blank" rel="noopener">Mở phiếu đăng ký trong tab mới ↗</a></p>
       </div>
 
       <!-- PAYMENT -->
       <aside class="payment-card" id="payment">
         <h3>Thanh toán học phí</h3>
-        <p class="payment-sub">Quét mã QR (ACB) hoặc chuyển khoản theo thông tin dưới đây. Ghi đúng nội dung chuyển khoản.</p>
+        <p class="payment-sub">Chọn khóa học và nhập họ tên — mã QR sẽ tự điền đúng số tiền và nội dung chuyển khoản.</p>
+        <div class="pay-picker">
+          <label for="course">Khóa học</label>
+          <select id="course">
+            <option value="" disabled selected>— Chọn khóa học —</option>
+          </select>
+          <label for="fullname">Họ tên người đăng ký</label>
+          <input type="text" id="fullname" placeholder="Nguyễn Văn A" />
+        </div>
         <div class="qr-box">
           <img id="qr-img" alt="Mã QR VietQR chuyển khoản ACB - Viện NRI"
                src="https://img.vietqr.io/image/970416-445599888-compact2.png?accountName=VIEN%20NGHIEN%20CUU%20DINH%20DUONG%20TP.HCM" />
@@ -230,21 +216,6 @@
     </div>
     <div class="footer-bottom">© <span id="year"></span> Viện Nghiên cứu Dinh dưỡng TP.HCM (NRI). Trang đăng ký khóa học.</div>
   </footer>
-
-  <!-- Success modal -->
-  <div class="modal" id="modal" hidden>
-    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" id="modal-close" aria-label="Đóng">×</button>
-      <div class="modal-icon">✅</div>
-      <h3 id="modal-title">Đã ghi nhận thông tin!</h3>
-      <p id="modal-msg"></p>
-      <p class="modal-next">Bước tiếp theo: thanh toán học phí theo thông tin bên cạnh (QR ACB / chuyển khoản), rồi gửi biên lai qua Zalo OA. Tư vấn viên của Viện cũng sẽ liên hệ với bạn.</p>
-      <div class="modal-actions">
-        <a href="#payment" class="btn btn-primary" id="modal-pay">Xem thanh toán</a>
-        <a href="https://zalo.me/4273635035669797437" target="_blank" rel="noopener" class="btn btn-ghost">Nhắn Zalo OA</a>
-      </div>
-    </div>
-  </div>
 
   <script src="assets/script.js"></script>
 </body>

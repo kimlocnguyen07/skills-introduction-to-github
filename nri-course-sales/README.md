@@ -39,4 +39,4 @@ Logo hiện dựng bằng SVG. Nếu muốn dùng file ảnh gốc: đặt `asse
 
 - Mã QR dùng dịch vụ `img.vietqr.io`. Khi mở bằng file local hoặc trong bản xem trước có chặn ảnh ngoài, QR sẽ ẩn và hiện dòng hướng dẫn chuyển khoản thay thế — khi deploy trực tuyến (GitHub Pages…) QR hiển thị bình thường.
 - Học phí Nhi khoa có 4 mốc ưu đãi đóng sớm (hiển thị trong thẻ khóa học). Cập nhật giá/lịch trong mảng `COURSES` ở `assets/script.js` khi có đợt chiêu sinh mới.
-- Form "Đăng ký nhanh" xử lý phía client (hiện hướng dẫn thanh toán + nhắc liên hệ Zalo). Muốn **lưu đơn tự động**, có thể nối với Google Form/Sheet hoặc backend.
+- **Form "Đăng ký nhanh" là Google Form của Viện nhúng trực tiếp** (iframe) — đơn tự lưu vào Google Sheet liên kết và có thể bật email thông báo trong tab "Câu trả lời" của form. Khung thanh toán bên cạnh có ô chọn khóa + họ tên để mã QR tự điền đúng số tiền và nội dung chuyển khoản. Lưu ý: iframe Google có thể không hiển thị trong bản preview trên claude.ai (bị chặn nhúng ngoài) — trên website thật hoạt động bình thường; đã có link dự phòng "Mở phiếu trong tab mới".
