@@ -27,13 +27,10 @@ python3 -m http.server 8080   # rồi mở http://localhost:8080
 - **Zalo OA:** https://zalo.me/4273635035669797437
 - **Liên hệ:** Hotline (028) 39 700 886 · viendinhduong@nrihcm.vn · Số J4, Đường Bửu Long, P. Hòa Hưng, TP.HCM.
 
-## Tùy chọn thay logo ảnh thật
+## Hình ảnh
 
-Logo hiện dựng bằng SVG. Nếu muốn dùng file ảnh gốc: đặt `assets/logo.png` rồi trong `index.html` thay khối `<svg class="steth">…</svg>` bằng:
-
-```html
-<img src="assets/logo.png" alt="Viện NRI" class="steth" style="height:44px;width:auto">
-```
+- `assets/logo.png` — logo chính thức của Viện (header).
+- `assets/team.webp` — ảnh đội ngũ chuyên gia (hero), đã tối ưu từ ảnh gốc 1,7MB xuống ~97KB.
 
 ## Ghi chú
 
