@@ -81,7 +81,7 @@ img { max-width: 100%; }
               linear-gradient(180deg, var(--blue-50), #fff);
   padding: clamp(2.5rem, 6vw, 4.5rem) 0;
 }
-.hero-inner { display: grid; grid-template-columns: 1.3fr .9fr; gap: 3rem; align-items: center; }
+.hero-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 2.5rem; align-items: center; }
 .eyebrow {
   display: inline-block; background: var(--orange-100); color: var(--orange-dark);
   padding: .35rem .9rem; border-radius: 999px; font-weight: 600; font-size: .85rem; margin-bottom: 1rem;
